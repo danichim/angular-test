@@ -1,0 +1,29 @@
+<home-header [username]="currentUser?.username" (eventEmitter)="logout($event)"></home-header>
+
+<div class="container">
+  <table class="table table-bordered table-hover" *ngIf="users?.length>0">
+    <thead>
+    <tr>
+      <th>Nr.</th>
+      <th>Username</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Gen</th>
+      <th>Birthday</th>
+      <th>Hobby</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{user?.username}}</td>
+      <td>{{user?.fullname}}</td>
+      <td>{{user?.email}}</td>
+      <td>{{user?.gender|gender}}</td>
+      <td>{{user?.birthday|date:'yyyy-MM-dd HH:mm'}}</td>
+      <td>{{user?.hobby}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <h2 *ngIf="users?.length===0">No users</h2>
+</div>

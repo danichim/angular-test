@@ -1,0 +1,17 @@
+#left-column {
+    background: white;
+    padding: 40px;
+}
+
+#right-column {
+    background: url('/assets/download.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.text-center {
+    color: #fff;
+    padding-top: 10px;
+}
